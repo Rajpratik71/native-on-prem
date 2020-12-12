@@ -26,7 +26,7 @@ RUN yum install -y \
   && \
   yum install -y python-pip openssl11
 
-RUN pip install six
+RUN pip install --no-cache-dir six
 
 COPY lib $DPDK_DIR/lib
 COPY drivers $DPDK_DIR/drivers

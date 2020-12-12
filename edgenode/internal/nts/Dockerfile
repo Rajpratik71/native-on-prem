@@ -6,8 +6,8 @@ FROM centos:7.6.1810 AS nts-deps-image
 RUN yum upgrade -y ca-certificates && \
     yum install -y epel-release && \
     yum install -y numactl-devel libhugetlbfs-utils iproute python3 python3-pip sudo && \
-    pip3 install docker==4.2.1 && \
-    pip3 install configparser==5.0.0
+    pip3 install --no-cache-dir docker==4.2.1 && \
+    pip3 install --no-cache-dir configparser==5.0.0
 
 FROM nts-deps-image
 
